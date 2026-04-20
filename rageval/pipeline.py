@@ -8,6 +8,7 @@ from dataclasses import dataclass, field
 
 import litellm
 
+from rageval.architecture.base import BasePipeline
 from rageval.config import Config
 from rageval.ingest import Document
 from rageval.retriever import FAISSRetriever
@@ -32,7 +33,7 @@ class PipelineResult:
     latency_ms: float = 0.0
 
 
-class RAGPipeline:
+class RAGPipeline(BasePipeline):
     """Orchestrate retrieval-augmented generation: retrieve, format context, call LLM."""
 
     def __init__(self, config: Config) -> None:

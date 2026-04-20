@@ -69,7 +69,36 @@ make generate-data
 make finetune
 make benchmark
 ```
-For more detailed documentation, see the [finetune/README](finetune/) and the architectural deep-dive at `docs/architecture.md`.
+
+### Architecture Layer
+
+```mermaid
+graph TD
+    subgraph Ingestion_Layer
+        A[Raw Docs] --> B[Chunking & Embedding]
+        B --> C[(Vector Store)]
+    end
+
+    subgraph Pipeline_Layer
+        D[User Query] --> E[Retriever]
+        C --> E
+        E --> F[Contextualizer]
+        F --> G[LLM Generator]
+    end
+
+    subgraph Eval_Layer
+        G --> H[RAGAS Evaluation]
+        H --> I{Scores OK?}
+    end
+
+    subgraph Fine_Tune_Layer
+        I -- No --> J[Synthetic Data Gen]
+        J --> K[QLoRA Fine-tuning]
+        K --> G
+    end
+```
+
+For more detailed documentation, see the [finetune/README](finetune/README.md) and the architectural deep-dive at [docs/architecture.md](docs/architecture.md).
 
 ## Reproducing Results
 

@@ -10,13 +10,14 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
+from rageval.architecture.base import BaseRetriever
 from rageval.config import Config
 from rageval.ingest import Document
 
 logger = logging.getLogger(__name__)
 
 
-class FAISSRetriever:
+class FAISSRetriever(BaseRetriever):
     """Retrieve the most relevant document chunks for a query using FAISS similarity search."""
 
     def __init__(self, config: Config) -> None:
