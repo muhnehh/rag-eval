@@ -1,0 +1,28 @@
+# rageval configuration
+# All pipeline parameters are controlled from this file.
+# Override per-run via CLI flags or environment variables.
+
+# --- Ingestion ---
+chunk_size: 512
+chunk_overlap: 64
+embedding_model: "all-MiniLM-L6-v2"
+
+# --- Retrieval ---
+top_k: 5
+
+# --- LLM ---
+llm_model: "gpt-4o-mini"
+llm_temperature: 0.0
+llm_max_tokens: 512
+
+# --- Paths ---
+index_dir: "data/index"
+raw_dir: "data/raw"
+golden_path: "data/golden/golden_qa.json"
+reports_dir: "reports"
+
+# --- Eval ---
+eval_metrics:
+  - faithfulness
+  - answer_relevancy
+  - context_recall

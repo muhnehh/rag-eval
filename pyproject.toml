@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rageval"
+version = "0.1.0"
+description = "CLI eval harness for RAG pipelines with integrated LoRA fine-tuning support"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Muhammed Nehan"},
+]
+keywords = ["rag", "evaluation", "llm", "fine-tuning", "lora"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "sentence-transformers>=2.2.0",
+    "faiss-cpu>=1.7.4",
+    "langchain-text-splitters>=0.0.1",
+    "litellm>=1.0.0",
+    "ragas>=0.1.0",
+    "datasets>=2.14.0",
+    "click>=8.1.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+    "pymupdf>=1.23.0",
+]
+
+[project.optional-dependencies]
+finetune = [
+    "peft>=0.7.0",
+    "transformers>=4.36.0",
+    "bitsandbytes>=0.41.0",
+    "trl>=0.7.0",
+    "accelerate>=0.25.0",
+    "torch>=2.1.0",
+    "anthropic>=0.18.0",
+]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.1.0",
+    "mypy>=1.7.0",
+]
+all = ["rageval[finetune,dev]"]
+
+[project.scripts]
+rageval = "cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["rageval*", "finetune*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

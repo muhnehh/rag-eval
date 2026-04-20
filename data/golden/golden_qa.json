@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is DSO and how is it calculated?",
+    "ground_truth": "DSO (Days Sales Outstanding) measures the average number of days it takes a company to collect payment after a sale. It is calculated as (Accounts Receivable / Total Credit Sales) × Number of Days. A lower DSO indicates faster collections and better cash flow management.",
+    "ground_truth_context": "Days Sales Outstanding (DSO) is a key accounts receivable metric. The formula is DSO = (Accounts Receivable / Total Credit Sales) × Number of Days in the Period. Industry benchmarks vary, but a DSO under 45 days is generally considered healthy."
+  },
+  {
+    "question": "What is three-way matching in accounts payable?",
+    "ground_truth": "Three-way matching is an AP control process that compares three documents before approving a payment: the purchase order (PO), the goods receipt note (GRN), and the vendor invoice. All three must agree on quantities, prices, and terms before payment is released. This prevents overpayment and fraud.",
+    "ground_truth_context": "Three-way matching is a standard internal control in accounts payable. It involves matching the purchase order, goods receipt, and supplier invoice. Discrepancies trigger an exception workflow for manual review before payment authorization."
+  },
+  {
+    "question": "What are common payment terms and what do they mean?",
+    "ground_truth": "Common payment terms include Net 30 (payment due within 30 days of invoice date), Net 60 (60 days), and 2/10 Net 30 (2% discount if paid within 10 days, otherwise full amount due in 30 days). These terms affect working capital and cash flow planning for both buyers and suppliers.",
+    "ground_truth_context": "Payment terms define when a buyer must pay a supplier. Net 30 means payment within 30 days. 2/10 Net 30 offers a 2% early payment discount if paid within 10 days. Extended terms like Net 60 or Net 90 are common in industries with long production cycles."
+  },
+  {
+    "question": "What is a dunning workflow in accounts receivable?",
+    "ground_truth": "A dunning workflow is a systematic process of sending increasingly urgent payment reminders to customers with overdue invoices. It typically starts with a friendly reminder, escalates to formal demand letters, and may end with referral to collections or legal action. Effective dunning workflows reduce bad debt and improve cash collection.",
+    "ground_truth_context": "Dunning is the process of communicating with customers to collect overdue payments. A typical dunning workflow includes: Day 1 — friendly reminder email, Day 15 — second notice with late fee warning, Day 30 — formal demand letter, Day 60+ — escalation to collections agency or legal counsel."
+  },
+  {
+    "question": "What is GRNI and why does it matter for financial reporting?",
+    "ground_truth": "GRNI (Goods Received Not Invoiced) represents inventory that has been physically received but for which no supplier invoice has arrived yet. It creates a liability on the balance sheet because the company owes payment. Accurate GRNI tracking is critical for period-end accruals and prevents understating liabilities.",
+    "ground_truth_context": "GRNI (Goods Received Not Invoiced) is an accrual account used when goods are received before the vendor invoice. The accounting entry debits inventory and credits the GRNI accrual. At period end, outstanding GRNI balances must be reviewed and reconciled to ensure accurate financial statements."
+  },
+  {
+    "question": "What is Days Sales Outstanding (DSO)?",
+    "ground_truth": "DSO measures the average number of days a company takes to collect payment after a sale. It is calculated as (Accounts Receivable / Total Credit Sales) × Number of Days.",
+    "ground_truth_context": "DSO is a key AR efficiency metric."
+  },
+  {
+    "question": "What does Net 30 payment terms mean?",
+    "ground_truth": "Net 30 means the buyer must pay the full invoice amount within 30 days of the invoice date.",
+    "ground_truth_context": "Payment terms define when payment is due."
+  },
+  {
+    "question": "What is an aging report in accounts receivable?",
+    "ground_truth": "An AR aging report categorizes outstanding invoices by how long they have been unpaid, typically in buckets: 0-30 days, 31-60 days, 61-90 days, and 90+ days overdue.",
+    "ground_truth_context": "AR aging reports are used to monitor collection risk."
+  },
+  {
+    "question": "What is a dunning workflow?",
+    "ground_truth": "A dunning workflow is an automated sequence of escalating payment reminders sent to customers with overdue invoices, starting with polite reminders and escalating to formal demand letters.",
+    "ground_truth_context": "Dunning automates collections follow-up."
+  },
+  {
+    "question": "What is early payment discount (2/10 net 30)?",
+    "ground_truth": "2/10 net 30 means the buyer can take a 2% discount if they pay within 10 days, otherwise the full amount is due in 30 days. It incentivizes faster payment.",
+    "ground_truth_context": "Early payment discounts improve cash flow."
+  },
+  {
+    "question": "What is GRNI in accounts payable?",
+    "ground_truth": "GRNI stands for Goods Received Not Invoiced. It is a balance sheet accrual for goods or services received but for which the vendor invoice has not yet arrived.",
+    "ground_truth_context": "GRNI is a period-end accrual entry."
+  },
+  {
+    "question": "What is the difference between accounts receivable and accounts payable?",
+    "ground_truth": "Accounts receivable is money owed TO the company by customers for goods or services delivered. Accounts payable is money owed BY the company to vendors for goods or services received.",
+    "ground_truth_context": "AR and AP are opposite sides of the same transaction."
+  },
+  {
+    "question": "What is a credit limit in B2B sales?",
+    "ground_truth": "A credit limit is the maximum outstanding balance a company will allow a customer to carry before requiring payment or blocking new orders. It is set based on credit risk assessment.",
+    "ground_truth_context": "Credit limits manage customer payment risk."
+  },
+  {
+    "question": "What is invoice discounting?",
+    "ground_truth": "Invoice discounting is a form of short-term borrowing where a company borrows against its outstanding invoices from a lender, receiving cash immediately rather than waiting for customer payment.",
+    "ground_truth_context": "Invoice discounting is a working capital financing tool."
+  },
+  {
+    "question": "What causes a high DSO?",
+    "ground_truth": "High DSO is caused by slow customer payments, ineffective collections processes, loose credit policies, disputed invoices, or billing errors that delay payment.",
+    "ground_truth_context": "DSO analysis helps identify collections problems."
+  },
+  {
+    "question": "What is a remittance advice?",
+    "ground_truth": "A remittance advice is a document sent by the payer to the payee explaining which invoices are being paid and any deductions taken. It allows the recipient to reconcile the payment against open invoices.",
+    "ground_truth_context": "Remittance advice supports payment reconciliation."
+  },
+  {
+    "question": "What is vendor reconciliation?",
+    "ground_truth": "Vendor reconciliation is the process of comparing your accounts payable records against the vendor's statement to identify discrepancies, missing invoices, or duplicate payments.",
+    "ground_truth_context": "Vendor reconciliation ensures AP accuracy."
+  },
+  {
+    "question": "What is a purchase order?",
+    "ground_truth": "A purchase order is a formal document issued by a buyer to a seller authorizing the purchase of specific goods or services at agreed prices and quantities. It creates a legal obligation.",
+    "ground_truth_context": "Purchase orders are the foundation of the procure-to-pay process."
+  },
+  {
+    "question": "What is the procure-to-pay process?",
+    "ground_truth": "Procure-to-pay (P2P) is the end-to-end process from identifying a purchase need through issuing a PO, receiving goods, matching the invoice, and making payment to the vendor.",
+    "ground_truth_context": "P2P encompasses the full AP workflow."
+  },
+  {
+    "question": "How do early payment discounts affect cash flow?",
+    "ground_truth": "Early payment discounts improve supplier cash flow by accelerating collections and can reduce buyer cost if the discount is taken. Companies weigh the discount benefit against preserving working capital.",
+    "ground_truth_context": "Payment term design affects working capital for both sides of a transaction."
+  }
+]
